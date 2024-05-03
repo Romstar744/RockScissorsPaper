@@ -1,6 +1,10 @@
 package com.starostin.rockscissorspaper
 
+import android.graphics.Color
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -49,12 +53,8 @@ class MainActivity : AppCompatActivity() {
         resultText.text = result
     }
 
-    private fun determineWinner(userChoice: Int, computerChoice: Int): String {
-        if (userChoice == computerChoice) {
-            return "Ничья!"
-        }
-
-        return when (userChoice) {
+    private fun determineWinner(userChoice: Int, computerChoice: Int): SpannableString {
+        val result = when (userChoice) {
             R.id.rock_button -> if (computerChoice == 2 || computerChoice == 3) "Вы выиграли!" else if (computerChoice == 1 || computerChoice == 4) "Компьютер выиграл!" else "Ничья!"
             R.id.paper_button -> if (computerChoice == 0 || computerChoice == 4) "Вы выиграли!" else if (computerChoice == 3) "Компьютер выиграл!" else "Ничья!"
             R.id.scissors_button -> if (computerChoice == 1 || computerChoice == 3) "Вы выиграли!" else if (computerChoice == 4 || computerChoice == 0) "Компьютер выиграл!" else "Ничья!"
@@ -62,5 +62,17 @@ class MainActivity : AppCompatActivity() {
             R.id.spock_button -> if (computerChoice == 0 || computerChoice == 2) "Вы выиграли!" else if (computerChoice == 1 || computerChoice == 3) "Компьютер выиграл!" else "Ничья!"
             else -> throw IllegalArgumentException("Некорректный выбор")
         }
+
+        val spannableResult = SpannableString(result)
+
+        val color = when (result) {
+            "Вы выиграли!" -> Color.GREEN
+            "Компьютер выиграл!" -> Color.RED
+            else -> Color.BLACK
+        }
+
+        spannableResult.setSpan(ForegroundColorSpan(color), 0, result.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        return spannableResult
     }
 }

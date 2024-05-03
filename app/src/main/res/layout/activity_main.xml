@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/rock_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock"
+        android:textSize="18sp"
+        android:onClick="onUserChoice"/>
+
+    <Button
+        android:id="@+id/paper_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paper"
+        android:layout_below="@id/rock_button"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:onClick="onUserChoice"/>
+
+    <Button
+        android:id="@+id/scissors_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scissors"
+        android:layout_below="@id/paper_button"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:onClick="onUserChoice"/>
+
+    <Button
+        android:id="@+id/lizard_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lizard"
+        android:layout_below="@id/scissors_button"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:onClick="onUserChoice"/>
+
+    <Button
+        android:id="@+id/spock_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spock"
+        android:layout_below="@id/lizard_button"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:onClick="onUserChoice"/>
+
+    <ImageView
+        android:id="@+id/user_choice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/spock_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <ImageView
+        android:id="@+id/computer_choice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/user_choice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/question_mark"/>
+
+    <TextView
+        android:id="@+id/user_choice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_choice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Your choice"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/computer_choice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/computer_choice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Computer's choice"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/computer_choice_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

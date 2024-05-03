@@ -9,7 +9,7 @@
         android:id="@+id/rock_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rock"
+        android:text="Камень"
         android:textSize="18sp"
         android:onClick="onUserChoice"/>
 
@@ -17,7 +17,7 @@
         android:id="@+id/paper_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Paper"
+        android:text="Бумага"
         android:layout_below="@id/rock_button"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
@@ -27,7 +27,7 @@
         android:id="@+id/scissors_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scissors"
+        android:text="Ножницы"
         android:layout_below="@id/paper_button"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
@@ -37,7 +37,7 @@
         android:id="@+id/lizard_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lizard"
+        android:text="Ящерица"
         android:layout_below="@id/scissors_button"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
@@ -47,7 +47,7 @@
         android:id="@+id/spock_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spock"
+        android:text="Спок"
         android:layout_below="@id/lizard_button"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
@@ -77,7 +77,7 @@
         android:layout_below="@id/user_choice"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="Your choice"
+        android:text="Ваш выбор"
         android:textSize="16sp"/>
 
     <TextView
@@ -87,7 +87,7 @@
         android:layout_below="@id/computer_choice"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="Computer's choice"
+        android:text="Выбор компьютера"
         android:textSize="16sp"/>
 
     <TextView

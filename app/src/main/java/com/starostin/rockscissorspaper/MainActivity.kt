@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             R.id.scissors_button -> R.drawable.scissors
             R.id.lizard_button -> R.drawable.lizard
             R.id.spock_button -> R.drawable.spock
-            else -> throw IllegalArgumentException("Invalid choice")
+            else -> throw IllegalArgumentException("Некорректный выбор")
         }
         userChoice.setImageResource(userChoiceImage)
 
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             2 -> R.drawable.scissors
             3 -> R.drawable.lizard
             4 -> R.drawable.spock
-            else -> throw IllegalStateException("Invalid random choice")
+            else -> throw IllegalStateException("Некорректный случайный выбор")
         }
         computerChoice.setImageResource(computerChoiceImageRes)
 
@@ -51,16 +51,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun determineWinner(userChoice: Int, computerChoice: Int): String {
         if (userChoice == computerChoice) {
-            return "It's a draw!"
+            return "Ничья!"
         }
 
         return when (userChoice) {
-            R.id.rock_button -> if (computerChoice == 2 || computerChoice == 3) "You win!" else if (computerChoice == 1 || computerChoice == 4) "Computer wins!" else "It's a draw!"
-            R.id.paper_button -> if (computerChoice == 0 || computerChoice == 4) "You win!" else if (computerChoice == 3) "Computer wins!" else "It's a draw!"
-            R.id.scissors_button -> if (computerChoice == 1 || computerChoice == 3) "You win!" else if (computerChoice == 4 || computerChoice == 0) "Computer wins!" else "It's a draw!"
-            R.id.lizard_button -> if (computerChoice == 4 || computerChoice == 1) "You win!" else if (computerChoice == 0 || computerChoice == 2) "Computer wins!" else "It's a draw!"
-            R.id.spock_button -> if (computerChoice == 0 || computerChoice == 2) "You win!" else if (computerChoice == 1 || computerChoice == 3) "Computer wins!" else "It's a draw!"
-            else -> throw IllegalArgumentException("Invalid choice")
+            R.id.rock_button -> if (computerChoice == 2 || computerChoice == 3) "Вы выиграли!" else if (computerChoice == 1 || computerChoice == 4) "Компьютер выиграл!" else "Ничья!"
+            R.id.paper_button -> if (computerChoice == 0 || computerChoice == 4) "Вы выиграли!" else if (computerChoice == 3) "Компьютер выиграл!" else "Ничья!"
+            R.id.scissors_button -> if (computerChoice == 1 || computerChoice == 3) "Вы выиграли!" else if (computerChoice == 4 || computerChoice == 0) "Компьютер выиграл!" else "Ничья!"
+            R.id.lizard_button -> if (computerChoice == 4 || computerChoice == 1) "Вы выиграли!" else if (computerChoice == 0 || computerChoice == 2) "Компьютер выиграл!" else "Ничья!"
+            R.id.spock_button -> if (computerChoice == 0 || computerChoice == 2) "Вы выиграли!" else if (computerChoice == 1 || computerChoice == 3) "Компьютер выиграл!" else "Ничья!"
+            else -> throw IllegalArgumentException("Некорректный выбор")
         }
     }
 }

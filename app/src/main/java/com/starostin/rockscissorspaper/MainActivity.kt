@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     private fun determineWinner(userChoice: Int, computerChoice: Int): SpannableString {
         val result = when (userChoice) {
             R.id.rock_button -> if (computerChoice == 2 || computerChoice == 3) "Вы выиграли!" else if (computerChoice == 1 || computerChoice == 4) "Компьютер выиграл!" else "Ничья!"
-            R.id.paper_button -> if (computerChoice == 0 || computerChoice == 4) "Вы выиграли!" else if (computerChoice == 3) "Компьютер выиграл!" else "Ничья!"
+            R.id.paper_button -> if (computerChoice == 0 || computerChoice == 4) "Вы выиграли!" else if (computerChoice == 3 || computerChoice == 2) "Компьютер выиграл!" else "Ничья!"
             R.id.scissors_button -> if (computerChoice == 1 || computerChoice == 3) "Вы выиграли!" else if (computerChoice == 4 || computerChoice == 0) "Компьютер выиграл!" else "Ничья!"
             R.id.lizard_button -> if (computerChoice == 4 || computerChoice == 1) "Вы выиграли!" else if (computerChoice == 0 || computerChoice == 2) "Компьютер выиграл!" else "Ничья!"
             R.id.spock_button -> if (computerChoice == 0 || computerChoice == 2) "Вы выиграли!" else if (computerChoice == 1 || computerChoice == 3) "Компьютер выиграл!" else "Ничья!"
